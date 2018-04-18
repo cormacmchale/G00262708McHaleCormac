@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage';
 })
 
 export class HomePage {
-  Status:string;
+
   constructor(public navCtrl: NavController, private storage:Storage) {
   }
   displayNews()
@@ -19,12 +19,9 @@ export class HomePage {
   {
     this.navCtrl.push('MessageBoardPage');
   }
+  displayVideo()
+  {
+    this.navCtrl.push('YoutubePage');
+  }
 
-  ionViewWillEnter(){
-    this.storage.get("Status").then
-    ((data) =>{this.Status = data;})
-    .catch((err) => 
-    {alert("Error accesssing Storage")})
-    console.log("debug");
-    }
 }

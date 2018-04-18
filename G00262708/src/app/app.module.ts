@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
+import {YoutubeVideoPlayer} from '@ionic-native/youtube-video-player';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NewsPage } from '../pages/news/news';
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http/';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NewsApiProvider
+    NewsApiProvider,
+    YoutubeVideoPlayer
   ]
 })
 export class AppModule {}
