@@ -22,6 +22,6 @@ export class YoutubePage {
   playVideo()
   {
     console.log("Hello");
-    this.videoPlayer.openVideo('MTN6o05UWiM');
+    this.videoPlayer.openVideo('cjIvu7e6Wq8');
   }
 }
