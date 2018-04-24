@@ -22,7 +22,6 @@ export class NewsPage {
 
   ionViewDidLoad()
   {
-    console
    this.news.GetNewsData().subscribe(data =>
      {
      this.newsStories = data.articles;
