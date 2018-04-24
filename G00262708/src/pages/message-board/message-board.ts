@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { Keyboard }  from '@ionic-native/Keyboard';
 /**
  * Generated class for the MessageBoardPage page.
  *
@@ -18,7 +19,7 @@ export class MessageBoardPage {
    MyStatus:String;
    savedStatus:String;
    addStatus:String;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private keyboard: Keyboard) {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MessageBoardPage');
@@ -41,6 +42,7 @@ export class MessageBoardPage {
       .catch((err) => 
       {alert("Error accesssing Storage")})
       console.log("debug");
+      this.keyboard.close();
   }
   clearBoard()
   {
@@ -50,5 +52,11 @@ export class MessageBoardPage {
     .catch((err) => 
     {alert("Error accesssing Storage")})
     console.log("debug");
+    this.keyboard.close();
+  }
+
+  showKeyboard()
+  {
+     this.keyboard.show();
   }
 }

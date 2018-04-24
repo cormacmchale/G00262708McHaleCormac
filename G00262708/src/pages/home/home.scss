@@ -1,6 +1,8 @@
 page-home {
     //add css for the tags here
-    ion-content {text-align: $position;}
+    ion-content {
+                text-align: $position;
+                padding-block-end: 20px;}
 }
 
    
