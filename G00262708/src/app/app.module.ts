@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { Geolocation } from '@ionic-native/geolocation';
 import { Keyboard }  from '@ionic-native/Keyboard';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http/';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NewsApiProvider,
     YoutubeVideoPlayer,
-    Keyboard
+    Keyboard,
+    Geolocation
   ]
 })
 export class AppModule {}
