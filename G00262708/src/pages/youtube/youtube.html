@@ -7,15 +7,30 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Video Player</ion-title>
+    <ion-title>Video Player/Coordinates</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-  <button ion-button round color="secondary"(click)="playVideo()">Play</button>
-  <button ion-button round color="secondary"(click)="presentActionSheet()">Display Coordinates</button>
-  <p>{{lat}}</p>
-  <p>{{long}}</p>
+    <ion-slides pager>
+        <ion-slide>
+            <button ion-button round color="secondary"(click)="playVideo()">Play</button>
+        </ion-slide>    
+        <ion-slide>
+            <button ion-button round color="secondary"(click)="presentActionSheet()">Display Coordinates</button>
+            <br>
+            <ion-item>
+            <ion-icon name="locate" item-start></ion-icon>
+            Longitude
+            <ion-badge item-end>{{long}}</ion-badge>
+            </ion-item>
+            <br>
+            <ion-item>
+            <ion-icon name="locate" item-start></ion-icon>
+            Latitude
+            <ion-badge item-end>{{lat}}</ion-badge>
+            </ion-item>
+        </ion-slide>      
+      </ion-slides>
 </ion-content>
