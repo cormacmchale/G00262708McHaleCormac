@@ -15,5 +15,7 @@
 
 <ion-content padding>
   <button ion-button round color="secondary"(click)="playVideo()">Play</button>
-  <video>{{videoPlayer}}</video>
+  <button ion-button round color="secondary"(click)="presentActionSheet()">Display Coordinates</button>
+  <p>{{lat}}</p>
+  <p>{{long}}</p>
 </ion-content>
