@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { Geolocation } from '@ionic-native/geolocation';
-
 import { Keyboard }  from '@ionic-native/Keyboard';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';

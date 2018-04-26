@@ -6,14 +6,13 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>News</ion-title>
+    <ion-title>Gaming News</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-<h1>Gaming News</h1>
-<ion-item *ngFor="let info of newsStories">  
+<ion-card *ngFor="let info of newsStories">  
 <img src ="{{info.urlToImage}}">
 <p>{{info.title}}</p>
-</ion-item>
+</ion-card>
 </ion-content>

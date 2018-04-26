@@ -54,7 +54,6 @@ export class MessageBoardPage {
     console.log("debug");
     this.keyboard.close();
   }
-
   showKeyboard()
   {
      this.keyboard.show();
