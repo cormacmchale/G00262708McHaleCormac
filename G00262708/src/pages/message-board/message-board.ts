@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { Keyboard }  from '@ionic-native/Keyboard';
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the MessageBoardPage page.
  *
@@ -19,9 +20,10 @@ export class MessageBoardPage {
    MyStatus:String;
    savedStatus:String;
    addStatus:String;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private keyboard: Keyboard) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private keyboard: Keyboard, public alertCtrl: AlertController) {
   }
   ionViewDidLoad() {
+    this.showConfirm();
     console.log('ionViewDidLoad MessageBoardPage');
     this.storage.get("Status").then
     ((data) =>{this.savedStatus = data;})
@@ -58,4 +60,28 @@ export class MessageBoardPage {
   {
      this.keyboard.show();
   }
+
+  showConfirm() {
+    let confirm = this.alertCtrl.create({
+      title: 'Bad Langauge',
+      message: 'Do you agree to not use bad langauge here?',
+      buttons: [
+        {
+          text: 'Disagree',
+          handler: () => {
+            console.log('Disagree clicked');
+            this.navCtrl.popToRoot();
+          }
+        },
+        {
+          text: 'Agree',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
 }
+
